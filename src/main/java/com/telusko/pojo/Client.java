@@ -1,8 +1,15 @@
 package com.telusko.pojo;
 
+import org.springframework.stereotype.Component;
+
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Pattern;
 import java.util.LinkedHashMap;
 
+@Component
 public class Client extends Person {
+
+    @Pattern(regexp = "^[a-zA-Z][a-zA-Z\\s]+$",message = "Address can only use alphabet letter characters.")
     private String address;
     private LinkedHashMap<String,String> map = new LinkedHashMap<>();
 
@@ -20,5 +27,4 @@ public class Client extends Person {
         map.put("address",getAddress());
         return map;
     }
-
 }
