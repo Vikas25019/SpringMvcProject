@@ -1,8 +1,11 @@
 package com.telusko.pojo;
 
+import javax.validation.constraints.*;
+
 public class Person {
 
     private String id;
+
     private String name;
 
     public String getId() {
