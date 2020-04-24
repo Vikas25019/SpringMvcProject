@@ -1,7 +1,10 @@
 package com.telusko.pojo;
 
+import org.springframework.stereotype.Component;
+
 import java.util.LinkedHashMap;
 
+@Component
 public class Employee extends Person {
     private String clientId;
     private String department;
